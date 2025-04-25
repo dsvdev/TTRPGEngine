@@ -14,7 +14,7 @@ RUN go mod download
 COPY . .
 
 # Собираем бинарный файл (предположим, что у вас main.go в корне)
-RUN go build -o app .
+RUN go build -o app ./cmd/bot
 
 # Используем минимальный образ для продакшн (без Go)
 FROM debian:bookworm-slim
